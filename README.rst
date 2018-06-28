@@ -5,17 +5,24 @@ Dyanmo Monitor Development
 Copy Latest Data
 ----------------
 
- t3serv016 will be a clone of t3serv009
- dynamo is installed under /root
+<your server> (ex. t3serv016) will be a clone of t3serv009. Install dynamo and dynamo-mitlocal under
+your account (ex. Work/).
+
+ # make directory
+ mkdir ~/Work
+ cd ~/Work
+ cp -r ~cmsprod/Work
 
  # for updated installation do
  /root/dynamo-mitlocal/install.sh ../dynamo
+ /etc/init.d/dynamod
 
 
 Data Content
 ------------
 
 First edit the data content of the web page you are producing by editing a file like:
+
   https://github.com/SmartDataProjects/dynamo/blob/master/lib/web/modules/transfers/monitor.py
 
 
@@ -23,6 +30,7 @@ The Web Template
 ----------------
 
 An example of a static web template is given in:
+
   https://github.com/SmartDataProjects/dynamo/blob/master/web/html/transfers/monitor_static.html
 
 
