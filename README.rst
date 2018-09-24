@@ -5,8 +5,7 @@ Dyanmo Monitor Development
 Copy Latest Data
 ----------------
 
-<your server> (ex. t3serv016) will be a clone of t3serv009. Install dynamo and dynamo-mitlocal under
-your account (ex. Work/).
+<your server> (ex. t3serv016) will be a clone of t3serv009. Install dynamo and dynamo-mitlocal under your account (ex. Work/).
 
  # make directory
  mkdir ~/Work
@@ -24,14 +23,6 @@ Data Content
 First edit the data content of the web page you are producing by editing a file like:
 
   https://github.com/SmartDataProjects/dynamo/blob/master/lib/web/modules/transfers/monitor.py
-
-
-The Web Template
-----------------
-
-An example of a static web template is given in:
-
-  https://github.com/SmartDataProjects/dynamo/blob/master/web/html/transfers/monitor_static.html
 
 
 Develop Some Code and See What it Does
@@ -77,3 +68,58 @@ Step 4: Commit your changes to our branch (monitor-undergrads)
   git commit -am 'Test'
   git push origin monitor-ugrads
 
+
+
+Standard Plots for Data Management Operations
+---------------------------------------------
+
+To produce a plot of any data management opertations(transfer of deletion) there are a number of selection parameters we should be able to specify. The selectable quantities are:
+
+  * date(min,max),
+  * grouping(source,target,link), exitcode(*,one,!one)
+  * expert sql statement
+
+ - transfer activity versus time
+   - number of
+   - volume
+   - rates (+n,v)
+   - cumulative volume
+   + 2D for links?
+   + error rate (n_error/n_all)
+
+ - deletion activity versus time
+   - number of
+   - volume
+   - rates (n,v)
+   - cumulative volume
+   + error rate (n_error/n_all)
+
+ - properties
+   + file size
+   + duration [tune time out]
+   + single rate
+   + error codes
+
+Lists
+=====
+
+ - selectable: date(min,max), grouping(source,target,link), exitcode(*,one,!one)
+               - lfn like "sql string"
+
+ - content of list
+   - lfn
+   - source
+   - target
+   - exitcode
+   - created
+   - started
+   - finished
+
+ - full history of a given file: deletion, transfer ordered chronologically
+
+
+Plot grouping
+=============
+
+ - standard plots for each site
+ - standard plots for a given sample
